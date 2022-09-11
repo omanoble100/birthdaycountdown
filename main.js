@@ -12,14 +12,17 @@ submit.addEventListener("click", function(e){
     const displayResult = document.getElementById('error')
 
     if(!email.value || !email.value.includes('@' && '.com') ){
+        displayResult.classList.remove("green")
         displayResult.innerText= 'Please enter a valid email'
         displayResult.classList.add("red")
         email.value=''
     }
     else{
+        displayResult.classList.remove("red")
         displayResult.innerText= 'Thank you for Subcribing'
         displayResult.classList.add("green")
         email.value =''
+        
     }
 
     
